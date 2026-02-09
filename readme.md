@@ -1,36 +1,58 @@
-# Quantum Mechanical Keyboard Firmware
+# KPRepublic BM40 // bm40hsrgb
+![BM40 RGB](bm40.jpg)
 
-[![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
-[![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/qmk)
-[![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
-[![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
-[![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
+An ortholinear 40% hotswap keyboard with per-key in-board RGB LEDs and backlight RGB LEDs, from KP Republic.
 
-This is a keyboard firmware based on the [tmk\_keyboard firmware](https://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](https://olkb.com), the [ErgoDox EZ](https://ergodox-ez.com) keyboard, and the Clueboard product line.
+---
 
-## Documentation
+## About
+### Hardware
+* Hardware Supported: `bm40hsrgb` PCB.
+* Hardware Availability: [Aliexpress](https://www.aliexpress.com/item/4001147779116.html), [KPRepublic](https://kprepublic.com/products/bm40-rgb-40-hot-swap-custom-mechanical-keyboard-pcb-qmk-underglow-type-c-planck?_pos=3&_sid=19edea37a&_ss=r&variant=34736434086051).
+* Modifications: Swapped R and G channels for the per-key RGB LEDs.
 
-* [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
+### Code origin
+* This code originates mainly from [QMK](https://github.com/qmk/qmk_firmware) and [Dagun/bm40](https://github.com/Dagun/bm40).
+* This firmware was manually converted from the `.json` files provided by KP Republic. You may find the original `.json` files [here](https://drive.google.com/drive/folders/1tlTHQIFcluK2mjZ4UbbKCsdRLgSRSPw6).
 
-The docs are powered by [VitePress](https://vitepress.dev/). They are also viewable offline; see [Previewing the Documentation](https://docs.qmk.fm/#/contributing?id=previewing-the-documentation) for more details.
+## Usage
+See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
-You can request changes by making a fork and opening a [pull request](https://github.com/qmk/qmk_firmware/pulls).
+### Compiling
 
-## Supported Keyboards
+#### Using QMK
+You need to setup your QMK build environment first, see [Usage](#usage).
+```
+qmk compile -kb kprepublic/bm40hsrgb/rev1 -km <KEYMAP>  # FOR REVISION 1
+qmk compile -kb kprepublic/bm40hsrgb/rev2 -km <KEYMAP>  # FOR REVISION 2
+```
+#### Using make
+You need to setup your QMK build environment first, see [Usage](#usage).
+```
+make kprepublic/bm40hsrgb/rev1:default  # FOR REVISION 1
+make kprepublic/bm40hsrgb/rev2:default  # FOR REVISION 2
+```
 
-* [Planck](/keyboards/planck/)
-* [Preonic](/keyboards/preonic/)
-* [ErgoDox EZ](/keyboards/ergodox_ez/)
-* [Clueboard](/keyboards/clueboard/)
-* [Cluepad](/keyboards/clueboard/17/)
-* [Atreus](/keyboards/atreus/)
+### Flashing
 
-The project also includes community support for [lots of other keyboards](/keyboards/).
+#### Using QMK
+You need to setup your QMK build environment first, see [Usage](#usage).
+```
+qmk flash -kb kprepublic/bm40hsrgb/rev1 -km <KEYMAP>  # FOR REVISION 1
+qmk flash -kb kprepublic/bm40hsrgb/rev2 -km <KEYMAP>  # FOR REVISION 2
+```
+#### Using make
+You need to setup your QMK build environment first, see [Usage](#usage).
+```
+make kprepublic/bm40hsrgb/rev1:default:flash  # FOR REVISION 1
+make kprepublic/bm40hsrgb/rev2:default:flash  # FOR REVISION 2
+```
+#### Using dfu-programmer
+Hint: This can be used to flash the default files provided by KP Republic.
+```
+sudo dfu-programmer erase --force
+sudo dfu-programmer atmega32u4 flash YOUR_FIRMWARE.hex
+sudo dfu-programmer reset
+```
 
-## Maintainers
-
-QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, [Hasu](https://github.com/tmk). The OLKB product firmwares are maintained by [Jack Humbert](https://github.com/jackhumbert), the Ergodox EZ by [ZSA Technology Labs](https://github.com/zsa), the Clueboard by [Zach White](https://github.com/skullydazed), and the Atreus by [Phil Hagelberg](https://github.com/technomancy).
-
-## Official Website
-
-[qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
+<br>
