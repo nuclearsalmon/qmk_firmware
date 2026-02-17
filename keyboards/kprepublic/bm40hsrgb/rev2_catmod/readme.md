@@ -12,11 +12,11 @@ This firmware was originally taken from a kbfirmware.json and manually converted
 
 Make example for this keyboard (after setting up your build environment):
 
-    make kprepublic/bm40hsrgb/rev2:default
+    make kprepublic/bm40hsrgb/rev2_catmod:catboard
 
 Flashing example for this keyboard:
 
-    make kprepublic/bm40hsrgb/rev2:default:flash
+    make kprepublic/bm40hsrgb/rev2_catmod:catboard:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
