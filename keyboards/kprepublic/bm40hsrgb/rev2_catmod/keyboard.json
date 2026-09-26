@@ -29,10 +29,6 @@
     }
   },
   "qmk": {
-    "locking": {
-      "enabled": true,
-      "resync": true
-    },
     "tap_capslock_delay": 0,
     "tap_keycode_delay": 0
   },
@@ -52,14 +48,18 @@
   },
   "rgblight": {
     "led_count": 6,
-    "max_brightness": 150,
+    "max_brightness": 255,
     "animations": {
       "knight": false,
       "rainbow_swirl": false
     },
     "brightness_steps": 16,
     "default": {
-      "on": false
+      "on": false,
+      "hue": 2,
+      "sat": 124,
+      "val": 255,
+      "speed": 32
     },
     "hue_steps": 2,
     "saturation_steps": 16,
@@ -67,7 +67,7 @@
   },
   "rgb_matrix": {
     "driver": "is31fl3733",
-    "max_brightness": 150,
+    "max_brightness": 255,
     "animations": {
       "alphas_mods": false,
       "gradient_up_down": true,
@@ -112,8 +112,9 @@
     "default": {
       "animation": "solid_color",
       "on": true,
-      "hue": 0,
-      "sat": 255,
+      "hue": 2,
+      "sat": 124,
+      "val": 132,
       "speed": 32
     },
     "hue_steps": 2,
@@ -542,7 +543,7 @@
         "flags": 1
       }
     ],
-    "sat_steps": 16,
+    "sat_steps": 8,
     "sleep": true,
     "speed_steps": 16,
     "val_steps": 8
