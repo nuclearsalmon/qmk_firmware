@@ -1,3 +1,9 @@
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
 CAPS_WORD_ENABLE = yes
+
+# Not used in this keymap.
+DYNAMIC_MACRO_ENABLE = no
+MAGIC_ENABLE = no
+GRAVE_ESC_ENABLE = no
+SPACE_CADET_ENABLE = no
