@@ -261,7 +261,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV , KC_1   , KC_2   , KC_3   , XXXXXXX, KC_MRWD, KC_MFFD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_INS ,
     KC_CAPS, KC_4   , KC_5   , KC_6   , KC_MPLY, KC_MPRV, KC_MNXT, KC_MINS, KC_EQL , KC_LCBR, KC_RCBR, KC_BSLS,
     _______, KC_7   , KC_8   , KC_9   , KC_0   , KC_VOLU, KC_VOLD, XXXXXXX, XXXXXXX, KC_WBAK, XXXXXXX, KC_WFWD,
-    _______, _______, _______, XXXXXXX, _______, KC_ENT          , _______, XXXXXXX, XXXXXXX, KC_UP  , KC_LEFT
+    _______, _______, _______, XXXXXXX, _______, KC_ENT          , _______, _______, XXXXXXX, KC_UP  , KC_LEFT
   ),
 
   /* Lower 2
@@ -279,7 +279,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F10 , KC_F11 , KC_F12 , KC_F19 , KC_F20 , KC_F21 , XXXXXXX, XXXXXXX,
     XXXXXXX, KC_F4  , KC_F5  , KC_F6  , KC_F13 , KC_F14 , KC_F15 , KC_MINS, KC_EQL , KC_LCBR, KC_RCBR, KC_BSLS,
     _______, KC_F7  , KC_F8  , KC_F9  , KC_F16 , KC_F17 , KC_F18 , KC_F22 , KC_F23 , KC_F24 , XXXXXXX, _______,
-    _______, _______, _______, _______, XXXXXXX, XXXXXXX         , XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN, KC_END
+    _______, _______, _______, _______, XXXXXXX, XXXXXXX         , _______, _______, XXXXXXX, KC_PGDN, KC_END
   ),
 
   /* Raise
@@ -297,25 +297,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TILD, KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_INS ,
     KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS, KC_PLUS, KC_LBRC, KC_RBRC, KC_PIPE,
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, KC_MRWD, KC_VOLU, KC_MFFD,
-    _______, _______, _______, XXXXXXX, _______, BSP_DEL         , _______, _______, KC_MPRV, KC_VOLD, KC_MNXT
+    _______, _______, _______, _______, _______, BSP_DEL         , _______, XXXXXXX, KC_MPRV, KC_VOLD, KC_MNXT
   ),
 
   /* Raise 2 - mouse. Right-hand symbols match Raise.
    * ,-----------------------------------------------------------------------------------.
-   * | Acl2 | Btn4 | WhlU | Btn5 |  $   |  %   |  ^   |  &   |  *   |  (   |  )   | Ins  |
+   * | Acl2 | Btn4 | WhlU | Btn5 |      |      |      |      |      |      |      |      |
    * |------+------+------+------+------+------+------+------+------+------+------+------|
-   * | Acl1 | WhlL | WhlD | WhlR |      |      |      |  _   |  +   |  [   |  ]   |  |   |
+   * | Acl1 | WhlL | WhlD | WhlR |      |      |      |      |      |      |      |      |
    * |------+------+------+------+------+------+------+------+------+------+------+------|
    * | Acl0 | Btn1 | MsUp | Btn2 |      |      |      |      |      |      |      |      |
    * |------+------+------+------+------+------+------+------+------+------+------+------|
-   * | Btn3 | MsLf | MsDn | MsRt | .... | Bsp/Del     | .... |      |      |      |      |
+   * | Btn3 | MsLf | MsDn | MsRt | .... |             | .... |      |      |      |      |
    * `-----------------------------------------------------------------------------------'
    */
    [_RAISE_B] = LAYOUT_ortho_4x12_1x2uC(
-    MS_ACL2, MS_BTN4, MS_WHLU, MS_BTN5, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_INS ,
-    MS_ACL1, MS_WHLL, MS_WHLD, MS_WHLR, XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS, KC_PLUS, KC_LBRC, KC_RBRC, KC_PIPE,
-    MS_ACL0, MS_BTN1, MS_UP  , MS_BTN2, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, KC_MRWD, KC_VOLU, KC_MFFD,
-    MS_BTN3, MS_LEFT, MS_DOWN, MS_RGHT, _______, BSP_DEL         , _______, _______, KC_MPRV, KC_VOLD, KC_MNXT
+    MS_ACL2, MS_BTN4, MS_WHLU, MS_BTN5, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    MS_ACL1, MS_WHLL, MS_WHLD, MS_WHLR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    MS_ACL0, MS_BTN1, MS_UP  , MS_BTN2, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    MS_BTN3, MS_LEFT, MS_DOWN, MS_RGHT, _______, BSP_DEL         , XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX
   ),
 
   /* Adjust (Lower + Raise)
@@ -431,7 +431,7 @@ static void handle_timers(void) {
 
 #define SPECIALTY_HUE_OFFSET 128
 #define LATCHED_HUE_OFFSET 64
-#define TRANSPARENT_VAL 1
+#define TRANSPARENT_VAL 11
 
 void light_keycode(uint8_t led_index, uint8_t col, uint8_t row, uint8_t layer) {
   const HSV hsv_default = rgb_matrix_get_hsv();
